@@ -1,0 +1,82 @@
+#projsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  place-items: center;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+#ObMap, #Paintdrop, #MedicalSystem, #ColorGuesser, #WeatherForecaster, #WorkInProgress {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  width: 400px;
+  color: black;
+  justify-content: flex-start;
+}
+
+section img, section video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the section where the project info (ul) is shown */
+#ProjInfo ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#ProjInfo ul li {
+  margin: 5px 0;
+}
+
+#ProjInfo {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  flex-direction: row;
+  font-size: 0.75em;
+}
+
+#mini-header {
+  font-weight: bold;
+}
+
+#ProjInfo p {
+  font-size: 1.2em;
+}
+
+#exit {
+  width: 100%
+}
