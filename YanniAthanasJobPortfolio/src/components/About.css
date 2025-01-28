@@ -1,0 +1,36 @@
+#profileImg {
+  height: 30em;
+  width: 25em;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+#About-Professional, #About-Personal {
+  max-width: 400px;
+  margin: 20px auto; 
+  padding: 20px;
+  border-radius: 12px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 45px;
+  margin: 0;
+  flex-shrink: 0;
+  padding: 40px
+}
+
+#profileImg {
+  display: block;
+  width: 300px;
+  height: 300px; 
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

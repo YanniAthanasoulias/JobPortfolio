@@ -1,0 +1,9 @@
+#NavBar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+h4 {
+  padding: 20px
+}
