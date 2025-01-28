@@ -1,12 +1,12 @@
 import './Header.css'
-import NavBar from './NavBar.jsx'
+import InfoBar from './InfoBar.jsx'
 
 function Header() {
   return (
     <>
       <section id="header">
         <h2> Yanni Athanasoulias </h2>
-        <NavBar />
+        <InfoBar />
       </section>
     </>
   )

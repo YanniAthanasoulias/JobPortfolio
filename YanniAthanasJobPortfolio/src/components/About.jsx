@@ -6,8 +6,26 @@ function About() {
     <section>
       <h1> About me </h1>
         <section id="about">
-          <p id="About-Professional"> I am a student currently studying in computer science at Dawson, doing my best to improve my skills and develop great work habits </p>
           <img src="/PortfolioImg.jpg" id="profileImg" />
+          <section id="About-Professional"> 
+            {/* In the past 4 years of coding, I have been working on group projects with classmates. Now I want to get real experience. My main objective is to improve my skills as a developer, and to work with others  */}
+            <h4> Professional Objectives </h4>
+            <ul>
+              <li> Technical Work Experience </li>
+              <li> Improve Technical Skills </li>
+              <li> Learn New Technology </li>
+              <li> Meet Like-Minded People </li>
+            </ul>
+          </section> 
+            <section id="About-Personal"> 
+              <h4> Personal Interests </h4>
+                <ul>
+                  <li> Basketball/Basketball Discourse</li>
+                  <li> Gaming </li>
+                  <li> Modding </li>
+                  <li> Hockey </li>
+                </ul>
+            </section>
         </section>
     </section>
     </>

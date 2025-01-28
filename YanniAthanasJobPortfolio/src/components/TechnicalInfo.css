@@ -1,0 +1,8 @@
+#Tech-Nav-Bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
+  padding: 100px;
+}
