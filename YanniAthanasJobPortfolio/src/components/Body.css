@@ -1,5 +1,6 @@
 #main-component {
   display: flex;
-  height: 600px;
+  height: auto;
+  width: auto;
   flex-direction: column;
 }

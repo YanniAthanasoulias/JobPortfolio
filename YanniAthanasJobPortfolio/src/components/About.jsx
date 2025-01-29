@@ -4,7 +4,6 @@ function About() {
   return (
     <>
     <section>
-      <h1> About me </h1>
         <section id="about">
           <img src="/PortfolioImg.jpg" id="profileImg" />
           <section id="About-Professional"> 
@@ -20,10 +19,10 @@ function About() {
             <section id="About-Personal"> 
               <h4> Personal Interests </h4>
                 <ul>
-                  <li> Basketball/Basketball Discourse</li>
-                  <li> Gaming </li>
-                  <li> Modding </li>
-                  <li> Hockey </li>
+                  <li> Basketball Discourse</li>
+                  <li> Story Driven Games </li>
+                  <li> Modding Older Games </li>
+                  <li> Playing Hockey & Basketball </li>
                 </ul>
             </section>
         </section>

@@ -32,9 +32,10 @@
 
 section img, section video {
   width: 100%;
-  height: 250px;
+  height: 290px;
   object-fit: cover;
   border-radius: 8px;
+  border: solid 2px black;
 }
 
 a {
@@ -75,8 +76,4 @@ a:hover {
 
 #ProjInfo p {
   font-size: 1.2em;
-}
-
-#exit {
-  width: 100%
 }

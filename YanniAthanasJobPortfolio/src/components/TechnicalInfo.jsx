@@ -17,8 +17,8 @@ function TechnicalInfo() {
         <button id="expButton" onClick={() => setExpPopUp(true)}> Experience </button>
 
         { projectsPopUp && <Projects setProjectsPopUp={setProjectsPopUp}/> }
-        { skillsPopUp && <TechnicalSkills/> }
-        { expPopUp && <Experience/> }
+        { skillsPopUp && <TechnicalSkills setSkillsPopUp={setSkillsPopUp}/> }
+        { expPopUp && <Experience setExpPopUp={setExpPopUp}/> }
 
       </section>
     </>
