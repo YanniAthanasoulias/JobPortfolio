@@ -6,3 +6,5 @@ body{
   background-color: #244855;
   color: #FBE9D0;
 }
+
+body * { place-self: center;}

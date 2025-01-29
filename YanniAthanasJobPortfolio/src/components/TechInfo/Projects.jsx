@@ -1,11 +1,31 @@
 import './Projects.css'
+import {useEffect, useRef} from 'react'
 
 // eslint-disable-next-line react/prop-types
 function Projects({setProjectsPopUp}) {
+
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if ( sectionRef.current && 
+        !event.target.closest("#proj") &&
+        !sectionRef.current.contains(event.target)) {
+        setProjectsPopUp(false); 
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [setProjectsPopUp]);
+
   return (
     <>
-    <section id="projsContainer" className="fixed inset-0 bg-black bg-opcaity-30 backdrop-blur-sm items-center">
-      <section id="ObMap"> 
+    <section id="projsContainer" ref={sectionRef}>
+      <section id="proj"> 
         <h3> US Obesity and Nutrition Map </h3>
           <img src="/USMap.png" alt="US Obesity & Nutrition Map" />
         <section id="ProjInfo">
@@ -30,7 +50,7 @@ function Projects({setProjectsPopUp}) {
         <p> GitHub Link: <a href="https://github.com/YanniAthanasoulias/USObesity-NutritionMap"> US Obesity and Nutrition Map Repo </a> </p>
       </section>
 
-      <section id="Paintdrop"> 
+      <section id="proj"> 
         <h3> Paintdrop Simulator </h3>
         <video controls muted>
           <source src="/PaintDrop.mp4" type="video/mp4"/>
@@ -55,7 +75,7 @@ function Projects({setProjectsPopUp}) {
         <p> GitHub Link: <a href="https://github.com/YanniAthanasoulias/PaintDrop"> PaintDrop Repo </a> </p>
       </section>
 
-      <section id="MedicalSystem"> 
+      <section id="proj"> 
         <h3> Medical System </h3>
         <img src="/MedicalSystem.png" alt="Medical System" />
         <section id="ProjInfo">
@@ -80,7 +100,7 @@ function Projects({setProjectsPopUp}) {
         <p> GitHub Link: <a href="https://github.com/YanniAthanasoulias/MedicalSystem"> Medical System Repo </a> </p>
       </section>
 
-      <section id="ColorGuesser"> 
+      <section id="proj"> 
         <h3> ColorGuesser </h3>
         <img src="/ColorGuesser.png" alt="Color Guesser Game" />
         <section id="ProjInfo">
@@ -101,7 +121,7 @@ function Projects({setProjectsPopUp}) {
         <p> GitHub Link: <a href="https://github.com/YanniAthanasoulias/ColorGuesser"> Color Guesser Repo </a> </p>
       </section>
 
-      <section id="WeatherForecaster"> 
+      <section id="proj"> 
         <h3> Weather Forecaster </h3>
         <img src="/WeatherForecaster.png" alt="Weather Forecaster App" />
         <section id="ProjInfo">
@@ -123,12 +143,11 @@ function Projects({setProjectsPopUp}) {
         <p> WebSite Link: <a href="https://yanniathanasouliasweatherapiapp.netlify.app/"> Weather Forecaster </a> </p>
       </section>
 
-      <section id="WorkInProgress"> 
+      <section id="proj"> 
         <h3> Currently Working on... </h3>
         <img src="/comingSoon.webp" alt="Coming Soon img" />
         <h1> Hockey Card Collecting Game WebSite </h1>
       </section>
-    <button id="exit" onClick={() => setProjectsPopUp(false)}> Exit </button>
     </section>
     </>
   )

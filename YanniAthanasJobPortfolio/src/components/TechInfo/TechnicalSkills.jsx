@@ -1,10 +1,28 @@
 import './TechnicalSkills.css'
+import {useEffect, useRef} from 'react'
 
 // eslint-disable-next-line react/prop-types
 function TechnicalSkills({setSkillsPopUp}) {
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (event.target.tagName !== 'IMG') {
+        setSkillsPopUp(false); 
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [setSkillsPopUp]);
+
   return (
     <>
-    <section id="skills-container">
+    <section id="skills-container" ref={sectionRef}>
     <img className="language-framework-logo" src="LanguageLogos\csharp.svg" alt="C# Logo" title="C#"></img>
       <img className="language-framework-logo" src="LanguageLogos\java.svg" alt="Java Logo" title="Java"></img>
       <img className="language-framework-logo" src="LanguageLogos\kotlin.svg" alt="Kotlin Logo" title="Kotlin"></img>
@@ -16,7 +34,6 @@ function TechnicalSkills({setSkillsPopUp}) {
       <img className="language-framework-logo" src="FrameWorkLogos\react.svg" alt="React Logo" title="React"></img>
       <img className="language-framework-logo" src="FrameWorkLogos\node-js.svg" alt="Node.js Logo" title="Node.js"></img>
       <img className="language-framework-logo" src="FrameWorkLogos\git.png" alt="Git Logo" title="Git"></img>
-      <button id="exit" onClick={() => setSkillsPopUp(false)}> Exit </button>
     </section>
     </>
   )

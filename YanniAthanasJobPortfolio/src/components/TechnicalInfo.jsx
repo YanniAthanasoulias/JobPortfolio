@@ -12,9 +12,9 @@ function TechnicalInfo() {
   return (
     <>
       <section id="Tech-Nav-Bar">
-        <button id="projButton" onClick={() => setProjectsPopUp(true)}> Projects </button>
-        <button id="skillsButton" onClick={() => setSkillsPopUp(true)}> Technical Skills </button>
-        <button id="expButton" onClick={() => setExpPopUp(true)}> Experience </button>
+        <section className="Button" onClick={() => setProjectsPopUp(true)}><span> Projects </span></section>
+        <section className="Button" onClick={() => setSkillsPopUp(true)}><span> Technical Skills </span></section>
+        <section className="Button" onClick={() => setExpPopUp(true)}><span> Experience </span></section>
 
         { projectsPopUp && <Projects setProjectsPopUp={setProjectsPopUp}/> }
         { skillsPopUp && <TechnicalSkills setSkillsPopUp={setSkillsPopUp}/> }
